@@ -11,24 +11,20 @@ public class leet234 {
     public static boolean isPalindrome(Node head) {
         Stack<Integer> stack = new Stack<>();
         Node current = head;
-    
-        // Push all elements of the linked list onto the stack
         while (current != null) {
             stack.push(current.data);
             current = current.next;
         }
-    
-        // Check if the linked list is palindrome
         current = head;
         while (current != null) {
             int ele = stack.pop();
             if (ele != current.data) {
-                return false;  // If any comparison fails, return false
+                return false; 
             }
             current = current.next;
         }
         
-        return true;  // If all comparisons are successful, return true
+        return true;
     }
     
 }
