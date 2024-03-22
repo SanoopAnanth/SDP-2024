@@ -16,6 +16,6 @@ public class day4prg4 {
             System.out.println("TW:"+tw);
             System.out.println("FW:"+fw);
         }
-
+        sc.close();
     }
 }

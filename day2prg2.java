@@ -3,9 +3,17 @@ import java.util.Scanner;
 public class day2prg2 {
     public static void main(String[] args) {
         int a[]=new int[9];
+        int x=0;
         Scanner sc=new Scanner(System.in);
         for(int i=0;i<a.length;i++){
-            a[i]=sc.nextInt();
+            x=sc.nextInt();
+            if(x>0 && x<100)
+            {
+                a[i]=x;
+            }else{
+                System.out.println("INVALID INPUT");
+                System.exit(0);
+            }
         }
         double avg1=0,avg2=0,avg3=0;
         for(int i=0;i<a.length;i++){
@@ -22,11 +30,12 @@ public class day2prg2 {
         avg1=avg1/3;
         avg2=avg2/3;
         avg3=avg3/3;
-        System.out.println(avg1);
-        System.out.println(avg2);
-        System.out.println(avg3);
+        // System.out.println(avg1);
+        // System.out.println(avg2);
+        // System.out.println(avg3);
         if(avg1<70 || avg2<70 || avg3<70){
             System.out.println("All Trainee are unfit");
+            System.exit(0);
         }
         if(avg1>=avg2 && avg1>=avg3){
             System.out.println("Traine number: 1");
